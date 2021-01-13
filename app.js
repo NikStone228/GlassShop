@@ -6,13 +6,13 @@ const indexRouter = require('./routes/indexRouter')
 
 const app = express()
 
-// Mongoose connection.
-mongoose.connect('mongodb://localhost:27017/glassShop', { 
-  useNewUrlParser: true,
+// MongoDB
+mongoose.connect('mongodb+srv://glassShop:akP7zAugnGTwJVch@cluster0.cxklx.mongodb.net/glassShop?retryWrites=true&w=majority', {
   useUnifiedTopology: true,
-  useCreateIndex: true, 
-});
-
+  useFindAndModify: true,
+  useNewUrlParser: true,
+  useFindAndUpdate: false
+})
 
 // Handlebars
 app.set('views', 'views')
@@ -31,3 +31,5 @@ app.use('/', indexRouter)
 app.listen(3000, () => {
   console.log('Server has been started on port 3000')
 })
+
+const password = 'akP7zAugnGTwJVch'
