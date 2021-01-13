@@ -6,6 +6,14 @@ const indexRouter = require('./routes/indexRouter')
 
 const app = express()
 
+// Mongoose connection.
+mongoose.connect('mongodb://localhost:27017/glassShop', { 
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true, 
+});
+
+
 // Handlebars
 app.set('views', 'views')
 app.set('view engine', 'hbs')
