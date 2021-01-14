@@ -7,6 +7,8 @@ const path = require('path')
 const app = express()
 
 const indexRouter = require('./routes/indexRouter')
+const imgUploadRouter = require('./routes/imgUpload')
+const yandexApiRouter = require('./routes/yandexApi')
 
 app.use(cookieParser())
 // Session
@@ -28,7 +30,7 @@ mongoose.connect(process.env.MONGODB, {
   useUnifiedTopology: true,
   useFindAndModify: true,
   useNewUrlParser: true,
-  useFindAndUpdate: false
+  useFindAndUpdate: true
 })
 
 // Handlebars
@@ -37,15 +39,15 @@ app.set('view engine', 'hbs')
 
 // Static & Parser
 app.use(express.json())
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Router
 app.use('/', indexRouter)
-
+app.use('/upload', imgUploadRouter)
+app.use('/api', yandexApiRouter)
 
 
 app.listen(3000, () => {
   console.log('Server has been started on port 3000')
 })
-
