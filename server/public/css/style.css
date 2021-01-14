@@ -164,3 +164,7 @@ h2 {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
+
+.contacts {
+  height: 300px;
+}
