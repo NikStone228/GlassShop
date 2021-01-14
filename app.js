@@ -4,7 +4,7 @@ const session = require('express-session')
 const path = require('path')
 const indexRouter = require('./routes/indexRouter')
 const imgUploadRouter = require('./routes/imgUpload')
-
+const yandexApiRouter = require('./routes/yandexApi')
 
 const app = express()
 
@@ -28,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 // Router
 app.use('/', indexRouter)
 app.use('/upload', imgUploadRouter)
+app.use('/api', yandexApiRouter)
 
 
 app.listen(3000, () => {
