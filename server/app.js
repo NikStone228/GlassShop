@@ -9,6 +9,7 @@ const app = express()
 const indexRouter = require('./routes/indexRouter')
 const imgUploadRouter = require('./routes/imgUpload')
 const yandexApiRouter = require('./routes/yandexApi')
+const cloudRouter = require('./routes/test2')
 
 app.use(cookieParser())
 // Session
@@ -46,6 +47,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', indexRouter)
 app.use('/upload', imgUploadRouter)
 app.use('/api', yandexApiRouter)
+app.use('/cloud', cloudRouter)
 
 
 app.listen(3000, () => {
