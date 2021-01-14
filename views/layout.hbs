@@ -38,7 +38,7 @@
   <li>Услуги</li>
   <li>Контакты</li>
   </ul>
- 
+
 </div>
 <div class="second">
   <ul class="footer-ul">
@@ -56,7 +56,12 @@
 <span>ТЦ "Твой Дом" Крокус Сити 66 км МКАД , Москва
 <br> Почта: sofielle.st2020@gmail.com
 <br> Раб. Тел. +74957272415</span>
-<a href="" style="color: #3BAFDA ;">◻</a>
+  {{#if isAuth}}
+    <a href="/logout">&times</a>
+  {{else}}
+    <a href="/auth" style="color: #3BAFDA">◻</a>
+  {{/if}}
+
 </div>
 </div>
 <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
