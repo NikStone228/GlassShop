@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 const session = require('express-session')
 const path = require('path')
 const indexRouter = require('./routes/indexRouter')
+const imgUploadRouter = require('./routes/imgUpload')
+
 
 const app = express()
 
@@ -25,11 +27,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // Router
 app.use('/', indexRouter)
-
+app.use('/upload', imgUploadRouter)
 
 
 app.listen(3000, () => {
   console.log('Server has been started on port 3000')
 })
 
-const password = 'akP7zAugnGTwJVch'
+
