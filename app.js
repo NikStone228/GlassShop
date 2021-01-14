@@ -13,7 +13,7 @@ mongoose.connect('mongodb+srv://glassShop:akP7zAugnGTwJVch@cluster0.cxklx.mongod
   useUnifiedTopology: true,
   useFindAndModify: true,
   useNewUrlParser: true,
-  useFindAndUpdate: false
+  useFindAndUpdate: true
 })
 
 // Handlebars
@@ -22,7 +22,7 @@ app.set('view engine', 'hbs')
 
 // Static & Parser
 app.use(express.json())
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Router
