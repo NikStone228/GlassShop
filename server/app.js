@@ -9,6 +9,7 @@ const app = express()
 const indexRouter = require('./routes/indexRouter')
 const imgUploadRouter = require('./routes/imgUpload')
 const yandexApiRouter = require('./routes/yandexApi')
+const indexBotRouter = require('./routes/indexBot')
 
 app.use(cookieParser())
 // Session
@@ -46,7 +47,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', indexRouter)
 app.use('/upload', imgUploadRouter)
 app.use('/api', yandexApiRouter)
-
+app.use('/zayavka', indexBotRouter)
 
 app.listen(3000, () => {
   console.log('Server has been started on port 3000')
