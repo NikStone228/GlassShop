@@ -8,8 +8,8 @@ module.exports.sendMsg = (req, res) => {
     '<b>Name</b>: ' + reqBody.name,
     '<b>Phone</b>: ' + reqBody.phone,
     '<b>Message</b>: ' + reqBody.message,
-    '<b>Рассчитать стоимость</b>: ' + reqBody.val1,
-    '<b>Заказать замер</b>: ' + reqBody.val2,
+    '<b>Рассчитать стоимость</b>: ' + ((+reqBody.val === 1) ? 'Да' : 'Нет'),
+    '<b>Заказать замер</b>: ' + ((+reqBody.val === 0) ? 'Да' : 'Нет'),
   ]
   let msg = ''
   //проходимся по массиву и склеиваем все в одну строку
