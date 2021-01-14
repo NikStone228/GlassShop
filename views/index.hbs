@@ -7,8 +7,12 @@
 <div class="right-side">
     <img src="" alt="" class="right-image">
 </div>
+  {{#if isAuth}}
+    <a href="/logout" class="btn btn-primary">Выйти</a>
+  {{else}}
+    <a href="/auth" class="btn btn-primary">Авторизация</a>
+  {{/if}}
 </section>
 
 <section class="advantages">
-    
 </section>
