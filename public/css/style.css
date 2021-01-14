@@ -3,10 +3,38 @@
   padding: 0;
 }
 
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+}
+
 .first-screen {
   width: 100vw;
   height: 100vh;
-  background-color: beige;
+}
+
+.head-const {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left-side {
+  width: 500px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  text-align: justify;
+  font-weight: 500;
+  margin-top: 100px;
+  font-size: 20px;
+}
+
+.left-side button {
+  margin-top: 20px;
+}
+
+.right-side img {
+  box-shadow: 1px 300px 90px -105px gray;
 }
 
 li {
@@ -16,11 +44,63 @@ li {
 ul {
   display: flex;
   justify-content: space-around;
-  background-color: aqua;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+h2 {
+  text-align: center;
+  margin: 50px 0 50px 0;
+}
+
+.advantages {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card img {
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.catalog {
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.catalog img {
+  width: 200px;
+  height: 200px;
+}
+
+.card-body span {
+  visibility: hidden;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #5bc0de;
+}
+
+.footer-ul {
+  display: flex;
+  flex-direction: column;
 }
