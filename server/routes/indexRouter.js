@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const Category = require('../models/categories')
-
+const Items = require('../models/items')
 
 
 router.get("/", async (req, res) => {
