@@ -1,17 +1,15 @@
 const { Router } = require("express");
+const ctrlTelegram = require('../api/telegramMsg');
 const router = Router();
 const Category = require('../models/categories')
 
-
+router.post('/', ctrlTelegram.sendMsg);
 
 router.get("/", async (req, res) => {
-
   res.render("index");
 });
 
 router.get("/shower", async (req, res) => {
-  // const categ = await Category.create({name: 'gello', image: 'image'})
-  // console.log(categ)
   res.render("shower");
 });
 
@@ -23,9 +21,9 @@ router.get("/mirror", (req, res) => {
   res.render("mirror");
 });
 
-router.get('/', async (req, res) => {
-  res.render('index', )
-})
+// router.get('/', async (req, res) => {
+//   res.render('index', )
+// })
 
 router.get('/auth', async (req, res) => {
   res.render('auth')
