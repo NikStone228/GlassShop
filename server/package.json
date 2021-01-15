@@ -1,7 +1,7 @@
 {
   "name": "glassshop",
   "version": "1.0.0",
-  "description": "",
+  "description": "Для упрощения процесса запроса установлен пакет 'request'. npm i request",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
