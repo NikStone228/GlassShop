@@ -71,10 +71,6 @@ router.get("/skinali", async (req, res) => {
 });
 
 
-// router.get('/', async (req, res) => {
-//   res.render('index', )
-// })
-
 router.get('/auth', async (req, res) => {
   res.render('auth')
 })
@@ -93,6 +89,23 @@ router.post('/auth', async (req, res) => {
   } else {
     res.send('Не верные данные')
   }
+})
+
+router.get('/editItem/:id', async (req, res) => {
+  const id = req.params.id
+  const currentItem = await Items.findById(id)
+  res.render('editItemForm', {
+    currentItem
+  })
+  // console.log(id)
+})
+
+router.post('/update', async (req, res) => {
+  const { name, image, hiddenId, imageHidden } = req.body
+  console.log('--------->', imageHidden)
+  await Items.findByIdAndUpdate({_id: hiddenId}, {$set: {name, image: imageHidden}})
+  res.redirect('/')
+  // console.log(name, image, hiddenId)
 })
 
 

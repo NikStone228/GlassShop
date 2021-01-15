@@ -1,14 +1,35 @@
-{{#each categoryShowerDescription}}
-  <h3>{{this.name}}</h3>
-{{/each}}
-<section class="catalog">
-  {{#each allItems}}
-    <div class="card" style="width: 250px; border: 1px solid #5bc0de">
-      <img src="{{this.image}}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{this.name}}</h5>
-        <a href="#" class="btn btn-info">Перейти</a>
-      </div>
-    </div>
+
+
+
+{{#if isAuth}}
+  {{#each categoryShowerDescription}}
+    <h3>{{this.name}}</h3>
+    <button class="btn btn-info ">Редактировать</button>
   {{/each}}
-</section>
+  <section class="catalog">
+    {{#each allItems}}
+      <div class="card" style="width: 250px; border: 1px solid #5bc0de">
+        <img src="{{this.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{this.name}}</h5>
+          <a href="#" class="btn btn-info">Перейти</a>
+        </div>
+      </div>
+    {{/each}}
+  </section>
+{{else}}
+  {{#each categoryShowerDescription}}
+    <h3>{{this.name}}</h3>
+  {{/each}}
+  <section class="catalog">
+    {{#each allItems}}
+      <div class="card" style="width: 250px; border: 1px solid #5bc0de">
+        <img src="{{this.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{this.name}}</h5>
+          <a href="#" class="btn btn-info">Перейти</a>
+        </div>
+      </div>
+    {{/each}}
+  </section>
+{{/if}}
