@@ -29,7 +29,7 @@
 
   .first-screen {
     width: 100vw;
-    height: 50vh;
+    height: 70vh;
   }
 
   .head-const {
@@ -439,7 +439,7 @@
 
   h2 {
     text-align: center;
-    margin: 80px 0 50px 0;
+    margin: 80px 0 30px 0;
   }
 
   .left-side {
@@ -457,7 +457,7 @@
 
   .first-screen {
     width: 100vw;
-    height: 60vh;
+    height: 80vh;
   }
 
   .head-const {

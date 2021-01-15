@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 
 const itemSchema = new mongoose.Schema({
-  name: String,
-  image: String, 
-  category: String
+  name: String, image: String, category: String
 });
 
 const Items = mongoose.model('Items', itemSchema);
@@ -21,8 +19,7 @@ async function createItems() {
     category: 'shower'
   });
   const noDoorsShowers = new Items({
-    name: 'Без дверей',
-    image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610698519/24_w2tika.jpg',
+    name: 'Без дверей', image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610698519/24_w2tika.jpg',
     category: 'shower'
   });
 
@@ -52,8 +49,7 @@ async function createItems() {
 
   const zerkalnoePannoMirrors = new Items({
     name: 'Зеркальное панно',
-    image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610699201/157_15_1__qg90hx.jpg',
-    category: 'mirror'
+    image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610699201/157_15_1__qg90hx.jpg', category: 'mirror'
   });
 
   // Euro mirrors
@@ -65,14 +61,12 @@ async function createItems() {
 
   const mirrorsPodogrev = new Items({
     name: 'Зеркала с подогревом',
-    image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610699443/349605_qpmx8a.jpg',
-    category: 'euro-mirror'
+    image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610699443/349605_qpmx8a.jpg', category: 'euro-mirror'
   });
 
   // Shelves
   const shelves = new Items({
-    name: 'Полки',
-    image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610700163/265656_vplizy.jpg',
+    name: 'Полки', image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610700163/265656_vplizy.jpg',
     category: 'shelves'
   });
   const shkafyIVitriny = new Items({
@@ -92,16 +86,13 @@ async function createItems() {
   });
 
 
-
   // Skinali
   const prozrachnuyeFartuki = new Items({
-    name: 'Прозрачные фартуки',
-    image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610700574/8881_u9zmhh.jpg',
+    name: 'Прозрачные фартуки', image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610700574/8881_u9zmhh.jpg',
     category: 'skinali'
   });
   const fotoPechat = new Items({
-    name: 'Фотопечать',
-    image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610700586/image-89-2_xdffeg.jpg',
+    name: 'Фотопечать', image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610700586/image-89-2_xdffeg.jpg',
     category: 'skinali'
   });
   const krashenyeFartuki = new Items({
@@ -110,20 +101,10 @@ async function createItems() {
     category: 'skinali'
   });
 
-
-
-  await Items.insertMany([raspashnyeShowers, razdvizhnyeShowers, noDoorsShowers,
-    raspashnyeDoors, razdvizhnyeDoors,
-    nastennyeMirrors, vlagostojkieMirrors, zerkalnoePannoMirrors,
-    mirrorsPodsvetka, mirrorsPodogrev,
-    shelves, shkafyIVitriny, stolyStoiky,
-    prozrachnuyeFartuki, fotoPechat, krashenyeFartuki, testShelve 
-  ]);
-
+  await Items.insertMany(
+    [raspashnyeShowers, razdvizhnyeShowers, noDoorsShowers, raspashnyeDoors, razdvizhnyeDoors, nastennyeMirrors,
+      vlagostojkieMirrors, zerkalnoePannoMirrors, mirrorsPodsvetka, mirrorsPodogrev, shelves, shkafyIVitriny,
+      stolyStoiky, prozrachnuyeFartuki, fotoPechat, krashenyeFartuki, testShelve]);
 }
-
-// createItems();
-
-
 
 module.exports = Items;
