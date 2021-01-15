@@ -45,7 +45,7 @@ async function createCategories() {
 
 }
 
-createCategories();
+// createCategories();
 
 
 module.exports = Categories
