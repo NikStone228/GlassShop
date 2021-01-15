@@ -23,14 +23,13 @@ app.use((req, res, next) => {
   res.locals.isAuth = req.session.isAuthenticated; // записываем в локалс имя юзера из сессии
   next();
 });
-
+console.log(process.env.MONGODB)
 
 // MongoDB
 mongoose.connect(process.env.MONGODB, {
   useUnifiedTopology: true,
   useFindAndModify: true,
-  useNewUrlParser: true,
-  useFindAndUpdate: true
+  useNewUrlParser: true
 })
 
 // Handlebars
