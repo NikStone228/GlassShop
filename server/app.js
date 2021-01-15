@@ -9,6 +9,7 @@ const app = express()
 const indexRouter = require('./routes/indexRouter')
 const imgUploadRouter = require('./routes/imgUpload')
 const yandexApiRouter = require('./routes/yandexApi')
+const cloudRouter = require('./routes/test2')
 const indexBotRouter = require('./routes/indexBot')
 
 app.use(cookieParser())
@@ -35,6 +36,7 @@ mongoose.connect(process.env.MONGODB, {
   useFindAndUpdate: true,
 });
 
+
 // Handlebars
 app.set("views", "views");
 app.set("view engine", "hbs");
@@ -48,6 +50,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use('/', indexRouter)
 app.use('/upload', imgUploadRouter)
 app.use('/api', yandexApiRouter)
+app.use('/cloud', cloudRouter)
 app.use('/zayavka', indexBotRouter)
 
 app.listen(3000, () => {
