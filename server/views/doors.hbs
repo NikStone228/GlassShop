@@ -7,7 +7,7 @@
 <!--      <img src="{{this.image}}" class="card-img-top" alt="...">-->
 <!--      <div class="card-body">-->
 <!--        <h5 class="card-title">{{this.name}}</h5>-->
-<!--        <a href="#" class="btn btn-info">Перейти </a>-->
+<!--        <a href="#" class="btn btn-info">Узнать стоимость </a>-->
 <!--      </div>-->
 <!--    </div>-->
 <!--  {{/each}}-->
@@ -19,7 +19,7 @@
 {{#if isAuth}}
   {{#each categoryDoorsDescription}}
     <h3>{{this.name}}</h3>
-    <button class="btn btn-info ">Редактировать</button>
+
   {{/each}}
   <section class="catalog">
     {{#each allItems}}
@@ -27,7 +27,8 @@
         <img src="{{this.image}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{this.name}}</h5>
-          <a href="#" class="btn btn-info">Перейти</a>
+          <a href="#" class="btn btn-info">Узнать стоимость</a>
+           <a href="/editItem/{{this._id}}" class="btn btn-danger edit ">Редактировать</a>
         </div>
       </div>
     {{/each}}
@@ -42,7 +43,7 @@
         <img src="{{this.image}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{this.name}}</h5>
-          <a href="#" class="btn btn-info">Перейти</a>
+          <a href="#" class="btn btn-info">Узнать стоимость</a>
         </div>
       </div>
     {{/each}}

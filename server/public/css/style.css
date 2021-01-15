@@ -5,6 +5,10 @@
     padding: 0;
   }
 
+  .edit {
+    margin-top: 5px;
+  }
+
   .footer a {
     color: black;
   }
@@ -460,7 +464,7 @@
 
   h2 {
     text-align: center;
-    margin: 80px 0 30px 0;
+    margin: 80px 0 50px 0;
   }
 
   .left-side {
@@ -477,7 +481,7 @@
 
   .first-screen {
     width: 100vw;
-    height: 80vh;
+    height: 60vh;
   }
 
   .head-const {
