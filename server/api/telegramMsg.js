@@ -21,9 +21,9 @@ module.exports.sendMsg = (req, res) => {
   //делаем запрос
   http.post(`https://api.telegram.org/bot${config.telegram.token}/sendMessage?chat_id=${config.telegram.chat}&parse_mode=html&text=${msg}`, function (error, response, body) {
     //не забываем обработать ответ
-    console.log('error:', error);
-    console.log('statusCode:', response && response.statusCode);
-    console.log('body:', body);
+    // console.log('error:', error);
+    // console.log('statusCode:', response && response.statusCode);
+    // console.log('body:', body);
     let otvet = 'Ваше сообщение успешно отправлено!'
     if (response.statusCode === 200) {
       res.render('index', { otvet });
