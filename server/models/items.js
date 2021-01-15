@@ -13,60 +13,60 @@ async function createItems() {
   const raspashnyeShowers = new Items({
     name: 'Распашные',
     image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610698365/dushevye-kabiny-iz-stekla_acktri.jpg',
-    category: 'Showers'
+    category: 'shower'
   });
   const razdvizhnyeShowers = new Items({
     name: 'Раздвижные',
     image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610698433/Vesta-DWD-S-v05_fix_01-1_koudlb.jpg',
-    category: 'Showers'
+    category: 'shower'
   });
   const noDoorsShowers = new Items({
     name: 'Без дверей',
     image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610698519/24_w2tika.jpg',
-    category: 'Showers'
+    category: 'shower'
   });
 
   // Doors
   const raspashnyeDoors = new Items({
     name: 'Распашные',
     image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610698615/534037457_w640_h640_skrytye-steklyannye-dveri_ypi2ot.jpg',
-    category: 'Doors'
+    category: 'doors'
   });
   const razdvizhnyeDoors = new Items({
     name: 'Раздвижные',
     image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610698632/e43051c3d0cb75dca12ed22802b6c93e_va9ivu.jpg',
-    category: 'Doors'
+    category: 'doors'
   });
 
   // Mirrors
   const nastennyeMirrors = new Items({
     name: 'Настенные',
     image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610699160/79b29a15d72a398508de6d1ec49516e1_in75ay.jpg',
-    category: 'Mirrors'
+    category: 'mirror'
   });
   const vlagostojkieMirrors = new Items({
     name: 'Влагостойкие',
     image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610699180/HTB1nXYflrsrBKNjSZFpq6AXhFXaW_ctc8uy.jpg',
-    category: 'Mirrors'
+    category: 'mirror'
   });
 
   const zerkalnoePannoMirrors = new Items({
     name: 'Зеркальное панно',
     image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610699201/157_15_1__qg90hx.jpg',
-    category: 'Mirrors'
+    category: 'mirror'
   });
 
   // Euro mirrors
   const mirrorsPodsvetka = new Items({
     name: 'Зеркала с подсветкой',
     image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610699415/12663-zerkalo-s-podsvetkoj-vanda-lux-90-ot-inmyroom_d4snjw.jpg',
-    category: 'euroMirrors'
+    category: 'euro-mirror'
   });
 
   const mirrorsPodogrev = new Items({
     name: 'Зеркала с подогревом',
     image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610699443/349605_qpmx8a.jpg',
-    category: 'euroMirrors'
+    category: 'euro-mirror'
   });
 
   // Shelves
@@ -85,6 +85,8 @@ async function createItems() {
     image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610700191/stekljannyeshkafyistelazhi48-555x777_yfshah.jpg',
     category: 'shelves'
   });
+
+
 
   // Skinali
   const prozrachnuyeFartuki = new Items({
