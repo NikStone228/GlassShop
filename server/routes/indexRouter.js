@@ -97,7 +97,14 @@ router.get('/editItem/:id', async (req, res) => {
   res.render('editItemForm', {
     currentItem
   })
-  // console.log(id)
+})
+
+router.get('/createItem/:id', async (req, res) => {
+  const category = req.params.id
+  console.log('==========>', category)
+  res.render('createItemForm', {
+    category
+  })
 })
 
 router.post('/update', async (req, res) => {
@@ -105,7 +112,13 @@ router.post('/update', async (req, res) => {
   console.log('--------->', imageHidden)
   await Items.findByIdAndUpdate({_id: hiddenId}, {$set: {name, image: imageHidden}})
   res.redirect('/')
-  // console.log(name, image, hiddenId)
+})
+
+router.post('/create', async (req, res) => {
+
+  const { name, imageHidden, hiddenCategory } = req.body
+  await Items.create({name, image: imageHidden, category: hiddenCategory})
+  res.redirect('/')
 })
 
 

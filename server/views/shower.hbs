@@ -1,10 +1,7 @@
-
-
-
 {{#if isAuth}}
   {{#each categoryShowerDescription}}
     <h3>{{this.name}}</h3>
-
+    <a href="/createItem/{{this.path}}" class="btn btn-warning edit">Добавить</a>
   {{/each}}
   <section class="catalog">
     {{#each allItems}}
@@ -28,7 +25,7 @@
         <img src="{{this.image}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{this.name}}</h5>
-          <a href="#" class="btn btn-info">Узнать стоимость</a>
+          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Узнать стоимость</button>
         </div>
       </div>
     {{/each}}
