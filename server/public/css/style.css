@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1024px) {
   * {
     margin: 0;
     padding: 0;
+  }
+
+  .footer a {
+    color: black;
   }
 
   body {
@@ -29,7 +33,7 @@
 
   .first-screen {
     width: 100vw;
-    height: 50vh;
+    height: 70vh;
   }
 
   .head-const {
@@ -39,7 +43,7 @@
   }
 
   .left-side {
-    width: 60%;
+    width: 600px;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
     font-weight: 600;
@@ -178,7 +182,7 @@
     position: absolute;
     width: 10%;
     left: 750px;
-    top: 300px;
+    top: 500px;
     animation-name: floating;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -241,6 +245,10 @@
     display: inline;
     margin-right: 10px;
   }
+
+  .footer a {
+    color: black;
+  }
   .left-side {
     width: 300px;
   }
@@ -254,6 +262,11 @@
   body {
     display: flex;
     flex-direction: column;
+  }
+
+  .footer a {
+    color: black;
+    font-weight: bold;
   }
 
   .btn {
@@ -420,6 +433,11 @@
     flex-direction: column;
   }
 
+  .footer a {
+    color: black;
+    font-weight: bold;
+  }
+
   ul {
     display: flex;
     justify-content: space-evenly;
@@ -428,9 +446,12 @@
   }
 
   li {
-    font-size: 14px;
+    font-size: 10px;
   }
-
+  .third {
+    font-size: 10px;
+    text-align: center;
+  }
   .nav {
     justify-content: space-around;
     margin-top: 20px;
@@ -447,12 +468,11 @@
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
     font-weight: 600;
-    text-align: justify;
     font-weight: 500;
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 18px;
-    margin-left: 50px;
     font-size: 14px;
+    text-align: center;
   }
 
   .first-screen {
@@ -462,7 +482,8 @@
 
   .head-const {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column-reverse;
+    justify-content: center;
     align-items: center;
   }
 
@@ -476,7 +497,7 @@
 
   .advantages {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     margin: 0 auto;
@@ -525,7 +546,7 @@
   .footer {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: #5bc0de;
     flex-shrink: none;
@@ -534,6 +555,8 @@
   .footer-ul {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    margin-top: 3px;
   }
 
   .right-image {
@@ -542,7 +565,7 @@
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     margin-left: 50px;
-    margin-top: 5px;
+    margin-top: 50px;
     width: 70%;
   }
 
