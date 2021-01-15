@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/NikStone228/GlassShop#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "cookie-parser": "^1.4.5",
     "debug": "^4.3.1",
     "dotenv": "^8.2.0",
