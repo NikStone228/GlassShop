@@ -85,6 +85,11 @@ async function createItems() {
     image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610700191/stekljannyeshkafyistelazhi48-555x777_yfshah.jpg',
     category: 'shelves'
   });
+  const testShelve = new Items({
+    name: 'Test shelve',
+    image: 'https://res.cloudinary.com/dcyb1gsma/image/upload/v1610700191/stekljannyeshkafyistelazhi48-555x777_yfshah.jpg',
+    category: 'shelves'
+  });
 
 
 
@@ -112,7 +117,7 @@ async function createItems() {
     nastennyeMirrors, vlagostojkieMirrors, zerkalnoePannoMirrors,
     mirrorsPodsvetka, mirrorsPodogrev,
     shelves, shkafyIVitriny, stolyStoiky,
-    prozrachnuyeFartuki, fotoPechat, krashenyeFartuki
+    prozrachnuyeFartuki, fotoPechat, krashenyeFartuki, testShelve 
   ]);
 
 }
