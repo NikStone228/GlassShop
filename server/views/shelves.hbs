@@ -1,25 +1,14 @@
+{{#each categoryShelvesDescription}}
+  <h3>{{this.name}}</h3>
+{{/each}}
 <section class="catalog">
-<div class="card" style="width: 250px; border: 1px solid #5bc0de">
-  <img src="/img/catalog/4952_277543_bg.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Распашные</h5>
-    <a href="#" class="btn btn-info">Перейти </a>
-  </div>
-</div>
-
-<div class="card" style="width: 250px; border: 1px solid #5bc0de">
-  <img src="/img/catalog/1c517408ab6956c3b6d3fadaa84d5534.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Раздвижные</h5>
-    <a href="#" class="btn btn-info">Перейти</a>
-  </div>
-</div>
-
-<div class="card" style="width: 250px; border: 1px solid #5bc0de">
-  <img src="img/catalog/img11221_10010_big.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Без дверей</span></h5>
-    <a href="#" class="btn btn-info">Перейти</a>
-  </div>
-</div>
+  {{#each allItems}}
+    <div class="card" style="width: 250px; border: 1px solid #5bc0de">
+      <img src="{{this.image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <a href="#" class="btn btn-info">Перейти</a>
+      </div>
+    </div>
+  {{/each}}
 </section>
