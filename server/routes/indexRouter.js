@@ -1,13 +1,17 @@
 const { Router } = require("express");
 const router = Router();
+const Category = require('../models/categories')
 
 
 
 router.get("/", async (req, res) => {
+
   res.render("index");
 });
 
-router.get("/shower", (req, res) => {
+router.get("/shower", async (req, res) => {
+  // const categ = await Category.create({name: 'gello', image: 'image'})
+  // console.log(categ)
   res.render("shower");
 });
 
