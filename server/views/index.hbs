@@ -1,4 +1,8 @@
-<!--<h4 class="text-center">{{ otvet }}</h4>-->
+
+<section class="first-screen"><a name="about"></a>
+
+<h4 class="text-center">{{ otvet }}</h4>
+
 <section class="first-screen">
 <div class="head-const">
 <div class="left-side">
@@ -25,7 +29,7 @@
 </section>
 
 
-<h2>Наши преимущества</h2>
+<h2>Наши преимущества<a name="preim"></a></h2>
 
 <section class="advantages">
   <div class="card" style="width: 150px; border: 1px solid #5bc0de">
@@ -34,7 +38,7 @@
     <p class="card-text">Многолетний опыт</p>
   </div>
 </div>
-
+<img src="/img/light-clip-art-24.png"  class="ball3">
  <div class="card" style="width: 150px; border: 1px solid #5bc0de">
   <img src="/img/diamond.svg" class="card-img-top" style="width: 50px;">
   <div class="card-body">
@@ -55,7 +59,7 @@
     <p class="card-text">Комфортный сервис</p>
   </div>
 </div>
-
+<img src="/img/light-clip-art-24.png"  class="ball4">
  <div class="card" style="width: 150px; border: 1px solid #5bc0de">
   <img src="/img/guaranteed.svg" class="card-img-top" style="width: 50px;">
   <div class="card-body">
@@ -65,7 +69,7 @@
 
 </section>
 
-<h2>Каталог</h2>
+<h2>Каталог</h2><a name="catalog"></a>
 
 <section class="catalog">
 <div class="card" style="width: 250px; border: 1px solid #5bc0de">
@@ -83,7 +87,7 @@
     <a href="/doors" class="btn btn-info">Перейти</a>
   </div>
 </div>
-
+<img src="/img/light-clip-art-24.png"  class="ball5">
 <div class="card" style="width: 250px; border: 1px solid #5bc0de">
   <img src="img/catalog/img11221_10010_big.jpg" class="card-img-top" alt="...">
   <div class="card-body">
@@ -118,7 +122,7 @@
 
 </section>
 
-<h2>Как нас найти</h2>
+<h2>Как нас найти</h2><a name="map"></a>
 <h3>ТЦ "Твой Дом" Крокус Сити 66 км МКАД , Москва</h3>
 <section class="contacts">
 <!DOCTYPE html>
@@ -146,6 +150,7 @@
 
       // Размещение геообъекта на карте.
       myMap.geoObjects.add(myGeoObject);
+      myMap.behaviors.disable('scrollZoom');
     }
   </script>
 </head>
