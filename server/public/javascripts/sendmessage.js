@@ -33,8 +33,8 @@ if (form) {
           icon: 'success',
           timer: 2000
         })
-        // document.querySelector('.success').style.display = 'block'
-        // document.querySelector('.contact').style.opacity = '0'
+        document.querySelector('.success').style.display = 'block'
+        document.querySelector('.contact').style.opacity = '0'
       }
       if (formReq.status !== 200) {
         swal({
@@ -42,8 +42,8 @@ if (form) {
           icon: 'error',
           timer: 2000
         })
-        // document.querySelector('.error').style.display = 'block'
-        // document.querySelector('.contact').style.opacity = '1'
+        document.querySelector('.error').style.display = 'block'
+        document.querySelector('.contact').style.opacity = '1'
       }
     }
     ////////////////////////////
