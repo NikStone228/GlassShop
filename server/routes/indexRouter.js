@@ -4,7 +4,6 @@ const router = Router();
 const Category = require('../models/categories')
 const Items = require('../models/items')
 
-
 router.post('/', ctrlTelegram.sendMsg);
 
 router.get("/", async (req, res) => {
